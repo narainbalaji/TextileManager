@@ -1,6 +1,32 @@
 html
  title= 'Textile Manager'
  head
-  link(href='/css/bootstrap-responsive.min.css' rel='stylesheet' media='screen')
+  link(href='/css/bootstrap.min.css' rel='stylesheet' media='screen')
+  link(href='/css/bootstrap-theme.min.css' rel='stylesheet' media='screen')
+  link(href='/css/main.css' rel='stylesheet' media='screen')
+  script(src='/js/jquery-3.1.1.min.js')
+  script(src='/js/bootstrap.min.js')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
  body
-  = 'Hello world\n'
+  nav(class='navbar navbar-default')
+   div(class='container-fluid')
+    div(class='navbar-header')
+     button(type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#main-menu' aria-expanded='false')
+      span(class='sr-only')= 'Toggle navigation'
+      span(class='icon-bar')
+      span(class='icon-bar')
+      span(class='icon-bar')
+    div(class='collapse navbar-collapse' id='main-menu')
+     ul(class='nav navbar-nav')
+      li(class='active')
+       a(href="#")= 'Home'
+  div(class='container')
+   div(class='row')
+    h3(class='col-sm-6 col-sm-offset-3') 
+     u= 'Enter reading details'
+    form(action='reading' method='put' class='col-sm-6 col-sm-offset-3 tex-form')
+     div(class='form-group row')
+      label(for='unit' class='col-sm-2 col-form-label')= 'Unit'
+      div(class='col-sm-10')
+       select(class='form-control' id='unit')
+        option= '1' 
