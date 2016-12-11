@@ -3,6 +3,9 @@ var app = express()
 
 
 // Initializing the app.
+app.use(express.static('public'))
+
+// Views
 app.set('views', './views')
 app.set('view engine', 'pug')
 
